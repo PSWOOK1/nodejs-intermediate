@@ -2,12 +2,12 @@ import { Router } from 'express';
 import { ProductsController } from '../controllers/products.controller.js';
 import { Sequelize } from 'sequelize';
 import { needSignin } from '../middlewares/need-signin.middleware.js';
-import db from '../models/index.cjs';
-
-const productsController = new ProductsController();
+import db from '../../models/index.cjs';
 
 const productsRouter = Router();
 const { Products, Users } = db;
+
+const productsController = new ProductsController();
 
 // 생성
 productsRouter.post('/products', needSignin, productsController.createProducts);

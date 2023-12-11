@@ -1,5 +1,5 @@
 import express from 'express';
-import { SERVER_PORT } from './constants/app.constant.js';
+import { SERVER_PORT } from '../constants/app.constant.js';
 import { apiRouter } from './routers/index.js';
 
 const app = express();
